@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Todo-list</title>
+  </head>
+  <body>
+    <h1>📋 나의 ToDo List</h1>
+    <p>여기에 할 일을 추가할 수 있어요!</p>
+    <form action="/add" method="post">
+      <input
+        type="text"
+        placeholder="추가하고 싶은 task를 입력하세요"
+        name="task"
+      />
+      <button type="submit">추가하기</button>
+    </form>
+
+    <!-- jinja2를 사용해 todos 에 for in 문을 사용해 list 출력 -->
+
+    <ul>
+      {% if not todos%}
+      <p>todos가 하나도 기록되어 있지 않습니다.</p>
+      {% else %} {% for todo in todos %}
+      <li>
+        {{todo.task}} : {{todo.done}}
+        <form
+          style="display: inline"
+          action="/delete/{{todo.id}}"
+          method="post"
+        >
+          <button type="submit">삭제 버튼</button>
+        </form>
+      </li>
+      {% endfor %} {% endif %}
+    </ul>
+  </body>
+</html>
