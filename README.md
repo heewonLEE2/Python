@@ -15,9 +15,14 @@ Python/
 
 ### 1. 📋 Todo List Project
 **Flask 기반 웹 애플리케이션**
-- **기술 스택**: Python Flask, HTML5, Jinja2
-- **주요 기능**: 할 일 추가/삭제, 웹 기반 인터페이스
-- **학습 목표**: Flask 웹 프레임워크, 백엔드 개발 기초
+- **기술 스택**: Python 3.x, Flask 3.1.1, Flask-SQLAlchemy 3.1.1, Bootstrap 5
+- **주요 기능**: 
+  - ✅ 할 일 추가/삭제 및 완료 상태 토글
+  - 📅 마감일 설정 및 날짜순 정렬
+  - 🔍 완료/미완료/전체 상태별 필터링
+  - 💾 SQLite 데이터베이스 영구 저장
+  - 📱 반응형 디자인 (모바일/데스크톱 지원)
+- **학습 목표**: Flask 웹 프레임워크, SQLAlchemy ORM, 백엔드 개발 기초
 - **상세 정보**: [Todo_List_project/README.md](./Todo_List_project/README.md)
 
 ### 2. 🤖 OpenAI API Project
@@ -40,6 +45,11 @@ Python/
 - HTML 템플릿 엔진 (Jinja2)
 - HTTP 메소드 (GET, POST)
 - 라우팅과 뷰 함수
+
+### 데이터베이스
+- SQLAlchemy ORM
+- SQLite 데이터베이스 연동
+- 데이터 모델링 및 CRUD 연산
 
 ### API 개발
 - RESTful API 설계
@@ -92,6 +102,7 @@ source venv/bin/activate
 ## 🎯 학습 목표
 
 - **웹 개발 기초**: Flask를 이용한 백엔드 개발 이해
+- **데이터베이스 활용**: SQLAlchemy ORM을 통한 데이터 관리
 - **API 활용**: 외부 서비스와의 연동 방법 습득
 - **프로젝트 구조**: 실무에서 사용하는 코드 구조 학습
 - **문제 해결**: 실제 문제를 코드로 해결하는 능력 향상
