@@ -1,3 +1,8 @@
 venv/
 .env
-.gradio
+__pycache__/
+*.pyc
+todo.db
+.vscode/
+.DS_Store
+Thumbs.db
