@@ -51,5 +51,5 @@ with gr.Blocks() as app:
     # 추천 버튼 클릭
     recommend_btn.click(fn=recommend_book, inputs=[title_dropdown, keyword_input],
     outputs=[output_text, output_img])
-
+    
 app.launch()
