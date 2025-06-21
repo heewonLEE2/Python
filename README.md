@@ -1,20 +1,23 @@
-# 🐍 Python 학습 및 프로젝트 저장소
+# Python 학습 및 프로젝트 저장소
 
 Python 언어를 활용한 다양한 학습 자료와 실습 프로젝트들을 모아놓은 저장소입니다. 기초부터 실전 프로젝트까지 체계적으로 정리되어 있습니다.
 
-## 📂 프로젝트 구조
-
-```
-Python/
-├── Todo_List_project/     # Flask 기반 할 일 관리 웹 애플리케이션
-├── OpenAI_API_project/    # OpenAI API를 활용한 LLM 서비스
-├── CrawlProject/          # 교보문고 크롤링 & GPT 도서 추천 시스템
-└── README.md             # 이 파일
-```
-
 ## 🚀 주요 프로젝트
 
-### 1. 📋 Todo List Project
+### 1. 🛌 수면 건강 분석 대시보드 (Streamlit)
+
+🎬 **데모 영상 보기**: [YouTube 링크](https://youtu.be/Weq4QAWPQ6Q)
+
+- **기술 스택**: Python, Streamlit, Plotly, Scikit-learn, OpenAI API
+- **주요 기능**:
+  - 📊 수면 데이터 기반 시각화 (박스플롯, 평균 수면 시간, 상관관계 히트맵 등)
+  - 📈 회귀 분석 및 심박수 예측 기능
+  - 💬 GPT 기반 수면·스트레스 관련 조언 제공
+- **데이터셋**: Sleep_health_and_lifestyle_dataset.csv
+- **실행 방법**: `streamlit run app.py`
+- **상세 정보**: 본 README 하단에 전체 설명 포함
+
+### 2. 📋 Todo List Project
 
 **Flask 기반 웹 애플리케이션**
 
@@ -28,7 +31,7 @@ Python/
 - **학습 목표**: Flask 웹 프레임워크, SQLAlchemy ORM, 백엔드 개발 기초
 - **상세 정보**: [Todo_List_project/README.md](./Todo_List_project/README.md)
 
-### 2. 🤖 OpenAI API Project
+### 3. 🤖 OpenAI API Project
 
 **OpenAI API를 활용한 LLM 서비스**
 
@@ -37,7 +40,7 @@ Python/
 - **학습 목표**: API 연동, 인공지능 서비스 개발
 - **상세 정보**: 각 프로젝트 폴더 내 문서 참조
 
-### 3. 📚 교보문고 크롤링 & GPT 도서 추천 시스템
+### 4. 📚 교보문고 크롤링 & GPT 도서 추천 시스템
 
 **웹 크롤링과 AI를 결합한 개인화 도서 추천 서비스**
 
@@ -51,57 +54,6 @@ Python/
   - ⚡ FastAPI 백엔드 서버 (RESTful API)
 - **학습 목표**: 웹 크롤링, NoSQL 데이터베이스, AI API 활용, 풀스택 개발
 - **상세 정보**: [CrawlProject/README.md](./CrawlProject/README.md)
-
-## 📚 학습 내용
-
-### Python 기초
-
-- 변수와 데이터 타입
-- 제어 구조 (조건문, 반복문)
-- 함수와 클래스
-- 모듈과 패키지
-
-### 웹 개발
-
-- Flask 프레임워크
-- FastAPI 프레임워크
-- HTML 템플릿 엔진 (Jinja2)
-- HTTP 메소드 (GET, POST)
-- 라우팅과 뷰 함수
-
-### 데이터베이스
-
-- SQLAlchemy ORM (관계형 DB)
-- MongoDB (NoSQL)
-- SQLite 데이터베이스 연동
-- 데이터 모델링 및 CRUD 연산
-
-### 웹 크롤링 & 데이터 수집
-
-- Selenium을 이용한 동적 페이지 크롤링
-- BeautifulSoup을 이용한 HTML 파싱
-- 이미지 다운로드 및 파일 관리
-- 웹사이트 구조 분석 및 데이터 추출
-
-### API 개발 & 연동
-
-- RESTful API 설계 및 구현
-- 외부 API 연동 (OpenAI GPT-4)
-- JSON 데이터 처리
-- 에러 핸들링 및 예외 처리
-
-### 인공지능 & 머신러닝
-
-- OpenAI GPT API 활용
-- AI 기반 추천 시스템 구현
-- 자연어 처리 응용
-
-### 실전 프로젝트
-
-- 웹 애플리케이션 구축
-- 데이터베이스 연동
-- 사용자 인터페이스 설계
-- 배포 및 운영
 
 ## 🛠️ 개발 환경 설정
 
@@ -129,47 +81,6 @@ venv\Scripts\activate
 # 가상환경 활성화 (macOS/Linux)
 source venv/bin/activate
 ```
-
-## 📖 학습 가이드
-
-### 1. 초보자를 위한 학습 순서
-
-1. **Python 기초 문법** 학습
-2. **Todo List Project**로 웹 개발 입문 (Flask + SQLite)
-3. **OpenAI API Project**로 AI 서비스 개발 체험
-4. **크롤링 & 추천 시스템**으로 고급 기술 통합 (FastAPI + MongoDB + AI)
-
-### 2. 각 프로젝트 실습 방법
-
-1. 해당 프로젝트 폴더로 이동
-2. README.md 파일의 설치 가이드 따라하기
-3. 코드 분석 및 기능 확장 시도
-4. 개인 프로젝트로 응용 발전
-
-### 3. 단계별 학습 목표
-
-- **1단계**: 기본 웹 애플리케이션 개발 (Todo List)
-- **2단계**: AI API 연동 및 활용 (OpenAI Project)
-- **3단계**: 데이터 수집부터 AI 추천까지 종합 (크롤링 프로젝트)
-
-## 🎯 학습 목표
-
-- **웹 개발 기초**: Flask/FastAPI를 이용한 백엔드 개발 이해
-- **데이터베이스 활용**: SQLAlchemy ORM 및 MongoDB를 통한 데이터 관리
-- **웹 크롤링**: Selenium과 BeautifulSoup을 활용한 데이터 수집
-- **AI 서비스 개발**: OpenAI API를 활용한 지능형 서비스 구현
-- **API 활용**: 외부 서비스와의 연동 방법 습득
-- **프로젝트 구조**: 실무에서 사용하는 코드 구조 학습
-- **문제 해결**: 실제 문제를 코드로 해결하는 능력 향상
-- **풀스택 개발**: 프론트엔드부터 백엔드, 데이터베이스까지 통합 개발
-
-## 🏆 프로젝트별 난이도
-
-| 프로젝트             | 난이도   | 주요 학습 내용                   |
-| -------------------- | -------- | -------------------------------- |
-| Todo List            | ⭐⭐     | Flask 기초, SQLite, 웹 개발 입문 |
-| OpenAI API           | ⭐⭐⭐   | API 연동, AI 서비스 개발         |
-| 크롤링 & 추천 시스템 | ⭐⭐⭐⭐ | 크롤링, NoSQL, AI 통합, 풀스택   |
 
 ## 🤝 기여 및 피드백
 
