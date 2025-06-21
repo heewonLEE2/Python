@@ -6,3 +6,6 @@ venv/
 
 # VSCode 설정 제외 (선택)
 .vscode/
+
+# api key 제외
+config/
