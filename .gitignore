@@ -6,3 +6,5 @@ todo.db
 .vscode/
 .DS_Store
 Thumbs.db
+.gradio
+Crawlprojcet/
