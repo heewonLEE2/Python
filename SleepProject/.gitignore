@@ -1,0 +1,11 @@
+# 가상환경 제외
+venv/
+
+# Jupyter 자동 백업 제외
+.ipynb_checkpoints/
+
+# VSCode 설정 제외 (선택)
+.vscode/
+
+# api key 제외
+config/

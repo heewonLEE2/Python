@@ -1,0 +1,10 @@
+gradio
+fastapi
+requests
+pymongo
+selenium
+beautifulsoup4
+pillow
+openai
+python-dotenv
+webdriver-manager

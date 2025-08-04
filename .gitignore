@@ -32,3 +32,16 @@ share/
 .ipynb_checkpoints/
 
 shape/
+
+venv/
+.env
+__pycache__/
+*.pyc
+todo.db
+.vscode/
+.DS_Store
+Thumbs.db
+.gradio
+Crawlprojcet/
+starbucks_seoul.csv
+
