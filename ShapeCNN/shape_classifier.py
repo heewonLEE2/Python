@@ -32,10 +32,6 @@ loader = DataLoader(
     shuffle=True
 )
 
-imgs, labels = next(iter(loader))
-print(imgs.shape, labels.shape)
-
-
 class ConvNeuralNetwork(nn.Module):
     def __init__(self):
         super(ConvNeuralNetwork, self).__init__()
@@ -68,10 +64,8 @@ class ConvNeuralNetwork(nn.Module):
         return output
     
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-print(device)
 
 model = ConvNeuralNetwork().to(device)
-print(model)
 
 loss = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
@@ -113,34 +107,6 @@ test_loader = DataLoader(
     batch_size=32,
     shuffle=False
 )
-
-
-def test(model, loader):
-    model.eval()
-
-    sum_accs = 0
-
-    img_list = torch.Tensor().to(device)
-    y_pred_list = torch.Tensor().to(device)
-    y_true_list = torch.Tensor().to(device)
-
-    for x_batch, y_batch in loader:
-        x_batch = x_batch.to(device)
-        y_batch = y_batch.to(device)
-        y_pred = model(x_batch)
-        y_prob = nn.Softmax(1)(y_pred)
-        y_pred_index = torch.argmax(y_prob, axis=1)
-        y_pred_list = torch.cat((y_pred_list, y_pred_index), dim=0)
-        y_true_list = torch.cat((y_true_list, y_batch), dim=0)
-        img_list = torch.cat((img_list, x_batch), dim=0)
-        acc = (y_batch == y_pred_index).float().sum() / len(y_batch) * 100
-        sum_accs += acc
-    
-    avg_acc = sum_accs / len(loader)
-    return y_pred_list, y_true_list, img_list, avg_acc
-
-y_pred_list, y_true_list, img_list, avg_acc = test(model, test_loader)
-print(f'테스트 정확도는 {avg_acc:.2f}% 입니다.')
 
 torch.save(model.state_dict(), 'model_weights.pth')
 torch.save(model, 'model.pt')
